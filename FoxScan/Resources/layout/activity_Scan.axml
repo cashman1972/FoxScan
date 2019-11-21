@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutroot"
+    android:minHeight="25px"
+    android:minWidth="25px"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:background="#48C0FA">
+        <TextView
+            android:id="@+id/txtText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanning items "
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/txtScanTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO {Location}"
+            android:textColor="#F3E35A"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:minHeight="10dp"
+        android:minWidth="25px"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/chkVendorFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply vendor filter: "/>
+        <EditText
+            android:hint="{v code}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="65dp"
+            android:singleLine="true"
+            android:inputType="textCapCharacters"
+            android:id="@+id/txtVCode"/>
+        <TextView
+            android:id="@+id/txtVendorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" {Vendor Name}"
+            android:textSize="12sp"
+            android:textColor="#A81535"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+        <TextView
+            android:id="@+id/txtGridHdr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vendor"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="140dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtGridHdr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Fox SKU"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="140dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtGridHdrQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Qty"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="35dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/listviewdata"
+            android:layout_width="match_parent"
+            android:layout_height="305dp"
+            android:layout_marginBottom="5dp">
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnBackScan"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="&lt; Back"/>
+        <Button
+            android:id="@+id/btnReports"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="Reports"/>
+        <Button
+            android:id="@+id/btnFinishScan"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Finish"/>
+        <TextView
+            android:id="@+id/txtTagCT"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:height="34dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text=" Qty: 0"
+            android:gravity="center_vertical"
+            android:background="#48C0FA"
+            android:textColor="#FFFF"/>
+    </LinearLayout>
+</LinearLayout>

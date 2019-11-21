@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/FoxLogo_Emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgFoxLogo"
+        android:padding="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+        <RadioGroup
+			android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoScanTo"
+                android:text="Scan TO another Fox's Location"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoScanFrom"
+                android:text="Scan FROM another Fox's Location"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoScanInv"
+                android:text="Scan ON HAND inventory"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtFromTo"
+            android:text="Store (To / From) :"/>
+        <Spinner
+            android:id="@+id/spinnerStore"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/arr_storenames">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnScanRFID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan RFID"
+            android:width="170dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnScanBarcodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Barcodes"
+            android:width="170dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnExit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:width="170dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEmpName"
+            android:textColor="#0022BB"
+            android:textSize="12sp"
+            android:text="Employee scanning: {employee}"/>
+    </LinearLayout>
+</LinearLayout>

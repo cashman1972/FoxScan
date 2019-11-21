@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/txtWHSScanSkuFoxStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="127dp"
+        android:layout_marginStart="3dp"
+        android:text="WWW09000XL"
+        android:textAlignment="viewStart"
+        android:paddingVertical="2dp"
+        android:textColor="#1846CE"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/txtWHSScanSkuVendorSKU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vendor SKU 1234"
+        android:textAlignment="viewStart"
+        android:paddingVertical="2dp"
+        android:layout_marginStart="3dp"
+        android:width="135dp"
+        android:textColor="#1846CE"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/txtWHSScanSkuPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$2099"
+        android:textAlignment="viewStart"
+        android:paddingVertical="2dp"
+        android:layout_marginStart="3dp"
+        android:width="53dp"
+        android:textColor="#1846CE"
+        android:textSize="16sp"/>
+</LinearLayout>

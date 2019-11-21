@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FoxScannerSvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.foxscannersvc.com.foxs.info/FoxScannerSvc.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFoxScannerSvc_GetStoreNameFromCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreNameFromCode" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetStoreNameFromCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreNameFromCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetStoreEmployeeNameFromNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreEmployeeNameFromNum" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetStoreEmployeeNameFromNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreEmployeeNameFromNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetDatasetXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatasetXML" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetDatasetXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatasetXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetVendorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetVendorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetStoreInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfoList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetStoreInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_RegisterScanner_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterScanner" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_RegisterScanner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterScannerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UploadRFIDInvScans_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRFIDInvScans" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UploadRFIDInvScans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRFIDInvScansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UploadEliteShoeScans_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadEliteShoeScans" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UploadEliteShoeScans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadEliteShoeScansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetScannerRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScannerRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetScannerRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScannerRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetMarkdownsVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarkdownsVendor" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetMarkdownsVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarkdownsVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetLastSoldInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastSoldInfo" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetLastSoldInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastSoldInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetRecentInvTixBatches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecentInvTixBatches" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetRecentInvTixBatches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecentInvTixBatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetRFIDEPCsfromBatchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDEPCsfromBatchList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetRFIDEPCsfromBatchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDEPCsfromBatchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UpdateVerifiedEPCs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVerifiedEPCs" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_UpdateVerifiedEPCs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVerifiedEPCsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetFoxScanSvcVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoxScanSvcVersion" />
+  </wsdl:message>
+  <wsdl:message name="IFoxScannerSvc_GetFoxScanSvcVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoxScanSvcVersionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFoxScannerSvc">
+    <wsdl:operation name="GetStoreNameFromCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreNameFromCode" message="tns:IFoxScannerSvc_GetStoreNameFromCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreNameFromCodeResponse" message="tns:IFoxScannerSvc_GetStoreNameFromCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreEmployeeNameFromNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreEmployeeNameFromNum" message="tns:IFoxScannerSvc_GetStoreEmployeeNameFromNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreEmployeeNameFromNumResponse" message="tns:IFoxScannerSvc_GetStoreEmployeeNameFromNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetDatasetXML" message="tns:IFoxScannerSvc_GetDatasetXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetDatasetXMLResponse" message="tns:IFoxScannerSvc_GetDatasetXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetVendorList" message="tns:IFoxScannerSvc_GetVendorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetVendorListResponse" message="tns:IFoxScannerSvc_GetVendorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetCategoryList" message="tns:IFoxScannerSvc_GetCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetCategoryListResponse" message="tns:IFoxScannerSvc_GetCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreInfoList" message="tns:IFoxScannerSvc_GetStoreInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetStoreInfoListResponse" message="tns:IFoxScannerSvc_GetStoreInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterScanner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/RegisterScanner" message="tns:IFoxScannerSvc_RegisterScanner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/RegisterScannerResponse" message="tns:IFoxScannerSvc_RegisterScanner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadRFIDInvScans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/UploadRFIDInvScans" message="tns:IFoxScannerSvc_UploadRFIDInvScans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/UploadRFIDInvScansResponse" message="tns:IFoxScannerSvc_UploadRFIDInvScans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadEliteShoeScans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/UploadEliteShoeScans" message="tns:IFoxScannerSvc_UploadEliteShoeScans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/UploadEliteShoeScansResponse" message="tns:IFoxScannerSvc_UploadEliteShoeScans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScannerRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetScannerRegistration" message="tns:IFoxScannerSvc_GetScannerRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetScannerRegistrationResponse" message="tns:IFoxScannerSvc_GetScannerRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkdownsVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetMarkdownsVendor" message="tns:IFoxScannerSvc_GetMarkdownsVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetMarkdownsVendorResponse" message="tns:IFoxScannerSvc_GetMarkdownsVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSoldInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetLastSoldInfo" message="tns:IFoxScannerSvc_GetLastSoldInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetLastSoldInfoResponse" message="tns:IFoxScannerSvc_GetLastSoldInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecentInvTixBatches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetRecentInvTixBatches" message="tns:IFoxScannerSvc_GetRecentInvTixBatches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetRecentInvTixBatchesResponse" message="tns:IFoxScannerSvc_GetRecentInvTixBatches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDEPCsfromBatchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetRFIDEPCsfromBatchList" message="tns:IFoxScannerSvc_GetRFIDEPCsfromBatchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetRFIDEPCsfromBatchListResponse" message="tns:IFoxScannerSvc_GetRFIDEPCsfromBatchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVerifiedEPCs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/UpdateVerifiedEPCs" message="tns:IFoxScannerSvc_UpdateVerifiedEPCs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/UpdateVerifiedEPCsResponse" message="tns:IFoxScannerSvc_UpdateVerifiedEPCs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoxScanSvcVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetFoxScanSvcVersion" message="tns:IFoxScannerSvc_GetFoxScanSvcVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxScannerSvc/GetFoxScanSvcVersionResponse" message="tns:IFoxScannerSvc_GetFoxScanSvcVersion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFoxScannerSvc" type="tns:IFoxScannerSvc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStoreNameFromCode">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetStoreNameFromCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreEmployeeNameFromNum">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetStoreEmployeeNameFromNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetXML">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetDatasetXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorList">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetVendorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfoList">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetStoreInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterScanner">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/RegisterScanner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadRFIDInvScans">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/UploadRFIDInvScans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadEliteShoeScans">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/UploadEliteShoeScans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannerRegistration">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetScannerRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkdownsVendor">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetMarkdownsVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSoldInfo">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetLastSoldInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecentInvTixBatches">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetRecentInvTixBatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDEPCsfromBatchList">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetRFIDEPCsfromBatchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVerifiedEPCs">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/UpdateVerifiedEPCs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoxScanSvcVersion">
+      <soap:operation soapAction="http://tempuri.org/IFoxScannerSvc/GetFoxScanSvcVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FoxScannerSvc">
+    <wsdl:port name="BasicHttpBinding_IFoxScannerSvc" binding="tns:BasicHttpBinding_IFoxScannerSvc">
+      <soap:address location="http://www.foxscannersvc.com.foxs.info/FoxScannerSvc.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

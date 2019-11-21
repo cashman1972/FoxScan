@@ -1,0 +1,28 @@
+http://www.foxsqlsvc.com.foxs.info/foxsvcsql.svc?wsdl
+htt://192.168.100.97/foxsvcsql.svc?wsdl
+
+
+webSvc.FoxSvcSql webSql = new webSvc.FoxSvcSql();
+txtStoreName.Text = webSql.GetStoreName(txtStoreCode.Text);
+
+	<ImageButton
+		android:src="@drawable/scan2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@android:color/transparent"
+		android:id="@+id/btnScan"
+	    android:padding="30dp"/>
+	<ImageButton
+		android:src="@drawable/Settings"
+		android:background="@android:color/transparent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnAdmin" 
+	    android:padding="30dp"/>
+	<ImageButton
+		android:src="@drawable/Exit"
+		android:background="@android:color/transparent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnExit" 
+	    android:padding="30dp"/>

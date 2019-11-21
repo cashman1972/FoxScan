@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FoxSvcSql" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.foxsqlsvc.com.foxs.info/FoxSvcSql.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www.foxsqlsvc.com.foxs.info/FoxSvcSql.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFoxSvcSql_XMLData_InputMessage">
+    <wsdl:part name="parameters" element="tns:XMLData" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_XMLData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XMLDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_JSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:JSONData" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_JSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetStoreNameFromCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreNameFromCode" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetStoreNameFromCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreNameFromCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetStoreEmployeeNameFromNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreEmployeeNameFromNum" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetStoreEmployeeNameFromNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreEmployeeNameFromNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetDatasetXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatasetXML" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetDatasetXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatasetXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetVendorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetVendorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetVersionNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionNum" />
+  </wsdl:message>
+  <wsdl:message name="IFoxSvcSql_GetVersionNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFoxSvcSql">
+    <wsdl:operation name="XMLData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/XMLData" message="tns:IFoxSvcSql_XMLData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/XMLDataResponse" message="tns:IFoxSvcSql_XMLData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/JSONData" message="tns:IFoxSvcSql_JSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/JSONDataResponse" message="tns:IFoxSvcSql_JSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreNameFromCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetStoreNameFromCode" message="tns:IFoxSvcSql_GetStoreNameFromCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetStoreNameFromCodeResponse" message="tns:IFoxSvcSql_GetStoreNameFromCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreEmployeeNameFromNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetStoreEmployeeNameFromNum" message="tns:IFoxSvcSql_GetStoreEmployeeNameFromNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetStoreEmployeeNameFromNumResponse" message="tns:IFoxSvcSql_GetStoreEmployeeNameFromNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetDatasetXML" message="tns:IFoxSvcSql_GetDatasetXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetDatasetXMLResponse" message="tns:IFoxSvcSql_GetDatasetXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetVendorList" message="tns:IFoxSvcSql_GetVendorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetVendorListResponse" message="tns:IFoxSvcSql_GetVendorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetCategoryList" message="tns:IFoxSvcSql_GetCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetCategoryListResponse" message="tns:IFoxSvcSql_GetCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFoxSvcSql/GetVersionNum" message="tns:IFoxSvcSql_GetVersionNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFoxSvcSql/GetVersionNumResponse" message="tns:IFoxSvcSql_GetVersionNum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFoxSvcSql" type="tns:IFoxSvcSql">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="XMLData">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/XMLData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JSONData">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/JSONData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreNameFromCode">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetStoreNameFromCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreEmployeeNameFromNum">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetStoreEmployeeNameFromNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatasetXML">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetDatasetXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorList">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetVendorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNum">
+      <soap:operation soapAction="http://tempuri.org/IFoxSvcSql/GetVersionNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FoxSvcSql">
+    <wsdl:port name="BasicHttpBinding_IFoxSvcSql" binding="tns:BasicHttpBinding_IFoxSvcSql">
+      <soap:address location="http://www.foxsqlsvc.com.foxs.info/FoxSvcSql.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

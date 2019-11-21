@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:minHeight="25px"
+    android:minWidth="25px"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutScanTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#48C0FA"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:id="@+id/txtText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanning items "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtScanTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO {Location}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#F3E35A" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutVendorFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="10dp"
+        android:minWidth="25px"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chkVendorFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply vendor filter: " />
+
+        <EditText
+            android:id="@+id/txtVCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="65dp"
+            android:hint="{v code}"
+            android:inputType="textCapCharacters"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txtVendorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" {Vendor Name}"
+            android:textColor="#A81535"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutNewConsol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="10dp"
+        android:minWidth="25px"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdoScanNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="New Merchandise" />
+
+            <RadioButton
+                android:id="@+id/rdoScanConsol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consolidations" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/txtGridHdr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="135dp"
+            android:background="#0022BB"
+            android:paddingVertical="2dp"
+            android:layout_marginStart="5dp"
+            android:text="Fox SKU"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtGridHdr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:width="65dp"
+            android:background="#0022BB"
+            android:paddingVertical="2dp"
+            android:text="EPC"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtGridHdr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:width="65dp"
+            android:background="#0022BB"
+            android:paddingVertical="2dp"
+            android:text="Store"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listviewdata"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_marginBottom="5dp"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBackScan"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="&lt; Back" />
+
+        <Button
+            android:id="@+id/btnReports"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="VIEW COUNTS" />
+
+        <Button
+            android:id="@+id/btnFinishScan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="transfer DATA" />
+
+        <TextView
+            android:id="@+id/txtTagCT"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:height="34dp"
+            android:background="#48C0FA"
+            android:gravity="center_vertical"
+            android:text=" Qty: 0"
+            android:textColor="#FFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

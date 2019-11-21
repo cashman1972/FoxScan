@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00a3ee"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+        <ImageView
+            android:id="@+id/adminpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:src="@drawable/AdminPage"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scanner Setup "
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Utility "
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"/>
+            <TextView
+                android:id="@+id/txtSettings_AppVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(app version 1.0) "
+                android:textAlignment="center"
+                android:textColor="#f2e940"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="Scanner #: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtSettings_ScannerNum"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:paddingStart="6dp"
+            android:text="Not Assigned"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#800303"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Assigned Location: "
+            android:textAlignment="viewEnd"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spinnerSettingsStore"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="WiFi Status: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtSettings_WiFiStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:text="Not Connected"
+            android:textAlignment="viewStart"
+            android:textColor="#800303"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="FoxScan Svc Ver.: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtSettings_ServiceVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:text="Unknown"
+            android:textAlignment="viewStart"
+            android:textColor="#800303"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="TC20 Serial #: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtSettings_SerialTC20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:text="-------"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="RFD2000 Serial #: "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtSettings_SerialRFD2000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:text="-------"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System Date / Time:"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:id="@+id/txtSettings_DateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monday, January 12, 2019  12:20pm"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* Ensure correct system date and time."
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use DEVICE settings to adjust if necessary."
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnSettings_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Scanner"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnSettings_Administrator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin."/>
+        <Button
+            android:id="@+id/btnSettings_TestDataXfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Data xFer"/>
+        <Button
+            android:id="@+id/btnSettings_Exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXIT"/>
+    </LinearLayout>
+</LinearLayout>

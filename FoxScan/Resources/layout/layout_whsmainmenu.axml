@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/FoxLogo_Emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgFoxLogo"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Warehouse Utilities Main Menu"
+        android:textAlignment="center"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnWHSRFIDVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify RFID Ticket Batch"
+            android:width="210dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnWHSScanViewDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RFID Scan and View SKU Detail"
+            android:width="210dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnWHSExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:width="210dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
+

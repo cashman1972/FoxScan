@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutroot"
+    android:minHeight="25px"
+    android:minWidth="25px"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutScanTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:gravity="center"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/txtText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan and View SKU Detail"
+            android:textColor="#03188f"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtWHSGridHdr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fox Style"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="127dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtWHSGridHdr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Vendor SKU"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="135dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtWHSGridHdr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Price"
+            android:textAlignment="center"
+            android:paddingVertical="2dp"
+            android:width="50dp"
+            android:textColor="#FFFFFF"
+            android:background="#0022BB"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="25px"
+        android:minWidth="25px"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/listviewscanskudetail"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:layout_marginBottom="5dp">
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtWHSScanSkuColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Color: ----------------"
+            android:textAlignment="center"
+            android:paddingVertical="1dp"
+            android:textColor="#1846CE"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txtWHSScanSkuDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: ---------------"
+            android:textAlignment="center"
+            android:paddingVertical="1dp"
+            android:textColor="#1846CE"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnWHSScanSkuDetailExit"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Cancel"/>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnWHSScanSkuDetailImport"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Import SKU Detail"/>
+    </LinearLayout>
+</LinearLayout>
+
